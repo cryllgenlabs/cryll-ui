@@ -1,7 +1,9 @@
 import React from "react";
 
 import { TopBar } from "./TopBar/TopBar";
-import "./page.css";
+
+import './assets/styles/tailwind.css';
+import './assets/styles/variables.scss';
 
 export const Page = () => {
   const [user, setUser] = React.useState();
