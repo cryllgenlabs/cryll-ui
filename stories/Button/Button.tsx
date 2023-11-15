@@ -9,7 +9,7 @@ export type ButtonProps = {
   click?: (e: any) => void;
 };
 
-export const Button = ({
+export default function Button({
   buttonStyle,
   buttonType,
   size,
@@ -19,7 +19,7 @@ export const Button = ({
     e.preventDefault();
     alert("button clicked");
   },
-}: ButtonProps) => {
+}: ButtonProps) {
   return (
     <button
       type={buttonType}
@@ -31,4 +31,4 @@ export const Button = ({
       {label}
     </button>
   );
-};
+}

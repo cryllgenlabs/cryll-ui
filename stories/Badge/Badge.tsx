@@ -14,7 +14,7 @@ const setStyles = (size: string) => {
   }
 };
 
-export function Badge({ value = "7.3", size = "sm" }: BadgeProps) {
+export default function Badge({ value = "7.3", size = "sm" }: BadgeProps) {
   return (
     <div
       className={

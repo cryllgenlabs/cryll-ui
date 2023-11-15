@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./Tile.scss";
-import { Tags } from "../Tags/Tags";
-import { Badge } from "../Badge/Badge";
+import Tags from "../Tags/Tags";
+import Badge from "../Badge/Badge";
 
 import Dropdown from "../Dropdown/Dropdown";
 

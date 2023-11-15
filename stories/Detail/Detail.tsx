@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Detail.module.scss";
-import { Tags } from "../Tags/Tags";
-import { Badge } from "../Badge/Badge";
+import Tags from "../Tags/Tags";
+import Badge from "../Badge/Badge";
 
 export default function Detail({
   title = "Pulp Fiction",

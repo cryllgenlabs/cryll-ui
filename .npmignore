@@ -1,0 +1,13 @@
+.storybook
+node_modules
+stories
+storybook-static
+.gitignore
+.npmignore
+package-lock.json
+postcss.config.js
+rollup.config.js
+tailwind.config.js
+tsconfig.json
+.git
+.DS_Store

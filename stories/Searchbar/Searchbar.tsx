@@ -1,7 +1,7 @@
 import styles from "./Searchbar.module.scss";
 import React from "react";
 import { useState } from "react";
-import { Button } from "../Button/Button";
+import Button from "../Button/Button";
 import PropTypes from "prop-types";
 import Input from "../Input/Input";
 
