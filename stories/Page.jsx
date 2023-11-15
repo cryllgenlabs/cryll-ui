@@ -1,6 +1,6 @@
 import React from "react";
 
-import { TopBar } from "./TopBar/TopBar";
+import TopBar from "./TopBar/TopBar";
 
 import './assets/styles/tailwind.css';
 import './assets/styles/variables.scss';

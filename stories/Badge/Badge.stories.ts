@@ -1,7 +1,7 @@
 // Badge.stories.ts
 
 import { Meta } from "@storybook/react";
-import { Badge } from "./Badge"; // Assuming the component file is named Badge.tsx
+import Badge from "./Badge"; // Assuming the component file is named Badge.tsx
 
 export default {
   title: "Components/Badge",

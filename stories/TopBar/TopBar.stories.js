@@ -1,4 +1,4 @@
-import { TopBar } from "./TopBar";
+import TopBar from "./TopBar";
 
 export default {
   title: "Components/TopBar",
