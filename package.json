@@ -21,7 +21,7 @@
   "scripts": {
     "test": "test",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "npx tailwindcss -i ./stories/page.css -o ./stories/assets/styles/tailwind.css && storybook build",
+    "build-storybook": "npx tailwindcss -i ./stories/tailwind.css -o ./stories/assets/styles/tailwind.css && storybook build",
     "rollup": "rollup -c",
     "npm:details": "npm pack --dry-run",
     "npm:publish": "npm run build && npm publish --access public"

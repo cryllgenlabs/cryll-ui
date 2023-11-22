@@ -12,7 +12,6 @@ import Tags from "./stories/Tags/Tags.js";
 import Textarea from "./stories/Textarea/Textarea.js";
 import Tile from "./stories/Tile/Tile.js";
 import TopBar from "./stories/TopBar/TopBar.js";
-import "./stories/page.css";
 
 export {
   Badge,
