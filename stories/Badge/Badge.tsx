@@ -17,12 +17,15 @@ const setStyles = (size: string) => {
 export default function Badge({ value = "7.3", size = "sm" }: BadgeProps) {
   return (
     <div
-      className={
-        setStyles(size) +
-        " flex items-center justify-center subpixel-antialiased font-sans  rounded-full ml-2"
-      }
+      className={`${setStyles(size)} 
+      flex items-center 
+      justify-center 
+      subpixel-antialiased 
+      font-sans 
+      rounded-full 
+      ${styles.badge}`}
     >
-      <div className={styles.badge}>{value}</div>
+      {value}
     </div>
   );
 }
