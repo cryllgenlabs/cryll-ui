@@ -29,6 +29,9 @@ export default function Tabs({ tabsList, triggerFunction }) {
 
 Tabs.defaultProps = {
   tabsList: ["Tab 1", "Tab 2", "Tab 3"],
+  triggerFunction: () => {
+    alert("Tab clicked");
+  },
 };
 
 Tabs.propTypes = {
