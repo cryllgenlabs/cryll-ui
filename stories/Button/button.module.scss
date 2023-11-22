@@ -18,9 +18,15 @@
   background-color: $primary-color;
 }
 .storybook-button--secondary {
-  color: $primary-color;
+  color: $secondary-font-color;
   background-color: $secondary-color;
 }
+
+.storybook-button--tertiary {
+  color: $tertiary-font-color;
+  background-color: $tertiary-color;
+}
+
 .storybook-button--small {
   font-size: 12px;
   padding: 10px 16px;

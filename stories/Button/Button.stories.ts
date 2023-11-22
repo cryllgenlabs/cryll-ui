@@ -46,8 +46,19 @@ export const Secondary = {
   },
 };
 
+export const Tertiary = {
+  args: {
+    buttonStyle: "tertiary",
+    buttonType: "button",
+    size: "medium",
+    label: "Tertiary",
+  },
+};
+
 export const Large = {
   args: {
+    buttonStyle: "primary",
+    buttonType: "button",
     size: "large",
     label: "Large",
   },
@@ -55,6 +66,8 @@ export const Large = {
 
 export const Small = {
   args: {
+    buttonStyle: "secondary",
+    buttonType: "button",
     size: "small",
     label: "Small",
   },
