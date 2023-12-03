@@ -7,7 +7,7 @@ import bundleScss from "rollup-plugin-bundle-scss";
 import pkg from "./package.json" assert { type: "json" };
 
 export default {
-  input: "index.js",
+  input: "index.ts",
   output: [
     { file: pkg.main, format: "cjs" },
     { file: pkg.module, format: "esm" },
