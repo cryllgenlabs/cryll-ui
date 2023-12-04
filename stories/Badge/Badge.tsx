@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./Badge.module.scss";
 
-export type BadgeProps = {
+interface BadgeProps {
   value?: string;
   size?: "sm" | "ms" | "lg";
-};
+}
 
 const setStyles = (size: string) => {
   if (size === "lg") {
@@ -14,7 +14,7 @@ const setStyles = (size: string) => {
   }
 };
 
-export default function Badge({ value = "7.3", size = "sm" }: BadgeProps) {
+export default function Badge({ value, size }: BadgeProps) {
   return (
     <div
       className={`${setStyles(size)} 

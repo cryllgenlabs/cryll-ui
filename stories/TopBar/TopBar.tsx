@@ -1,8 +1,20 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import Button from "../Button/Button";
 import "./TopBar.scss";
+
+interface TopBarProps {
+  title?: string;
+  user?: {
+    name: string;
+  } | null;
+  imgAddress?: string;
+  imgAltText?: string;
+  onLogin?: () => void;
+  onLogout?: () => void;
+  onCreateAccount?: () => void;
+  loginEnabled?: boolean;
+}
 
 export default function TopBar({
   title = "Title",
@@ -13,7 +25,7 @@ export default function TopBar({
   onLogout = () => {},
   onCreateAccount = () => {},
   loginEnabled = false,
-}) {
+}: TopBarProps) {
   return (
     <div className="storybook-topbar">
       <div className="topbar-logo">
@@ -50,15 +62,3 @@ export default function TopBar({
     </div>
   );
 }
-TopBar.propTypes = {
-  title: PropTypes.string.isRequired,
-  user: PropTypes.shape({
-    name: PropTypes.string,
-  }),
-  imgAddress: PropTypes.string,
-  imgAltText: PropTypes.string,
-  onLogin: PropTypes.func,
-  onLogout: PropTypes.func,
-  onCreateAccount: PropTypes.func,
-  loginEnabled: PropTypes.bool,
-};

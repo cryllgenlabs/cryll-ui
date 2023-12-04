@@ -1,8 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styles from "./Tags.module.scss";
 
-export default function Tags({ tags = ["tag1", "tag2", "tag3"] }) {
+interface TagsProps {
+  tags: string[];
+}
+
+export default function Tags({ tags }: TagsProps) {
   return (
     <div className={styles.tile__tags}>
       {tags.map((item, index) => {
@@ -15,7 +18,3 @@ export default function Tags({ tags = ["tag1", "tag2", "tag3"] }) {
     </div>
   );
 }
-
-Tags.propTypes = {
-  tags: PropTypes.arrayOf(PropTypes.string),
-};

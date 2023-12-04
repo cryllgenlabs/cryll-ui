@@ -1,8 +1,17 @@
 import styles from "./tab.module.scss";
-import PropTypes from "prop-types";
-import React from "react";
+import React, { MouseEventHandler } from "react";
 
-export default function Tab({ tab, isActive, selectTab }) {
+interface TabProps {
+  tab?: string;
+  isActive?: boolean;
+  selectTab?: () => void;
+}
+
+export default function Tab({
+  tab = "Default",
+  isActive = false,
+  selectTab,
+}: TabProps) {
   return (
     <div
       className={`flex items-center justify-center px-4 w-fit h-full 	max-w-max
@@ -15,13 +24,3 @@ export default function Tab({ tab, isActive, selectTab }) {
     </div>
   );
 }
-Tab.defaultProps = {
-  tab: "",
-  isActive: false,
-  selectTab: () => {},
-};
-Tab.propTypes = {
-  tab: PropTypes.string.isRequired,
-  isActive: PropTypes.bool.isRequired,
-  selectTab: PropTypes.func.isRequired,
-};

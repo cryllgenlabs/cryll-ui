@@ -3,14 +3,19 @@ import styles from "./Modal.module.scss";
 
 import { ReactNode } from "react";
 
-type ModalProps = {
+interface ModalProps {
   title?: string;
   isOpen?: boolean;
   onClose?: () => void;
   children?: ReactNode;
-};
+}
 
-const Modal = ({ title = "Modal", isOpen, onClose, children }: ModalProps) => {
+export default function Modal({
+  title = "Modal",
+  isOpen,
+  onClose,
+  children,
+}: ModalProps) {
   if (!isOpen) return null;
 
   return (
@@ -24,6 +29,4 @@ const Modal = ({ title = "Modal", isOpen, onClose, children }: ModalProps) => {
       </div>
     </div>
   );
-};
-
-export default Modal;
+}

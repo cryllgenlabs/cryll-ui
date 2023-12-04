@@ -2,16 +2,13 @@ import React from "react";
 import styles from "./Counter.module.scss";
 import { useState } from "react";
 
-function Counter({ initialCount, title }) {
-  const [counter, setCounter] = useState(Number(initialCount) || 0);
-  /*
-    useState is a hook that allows us to use state in a functional component.
-    useState returns an array with two elements:
-    1. The current value of the state
-    2. A function to update the state
+interface CounterProps {
+  initialCount?: number;
+  title?: string;
+}
 
-    We can use array destructuring to assign these values to variables.
-  */
+export default function Counter({ initialCount, title }: CounterProps) {
+  const [counter, setCounter] = useState(Number(initialCount) || 0);
 
   function increaseCount() {
     setCounter(counter + 1);
@@ -50,4 +47,3 @@ function Counter({ initialCount, title }) {
     </div>
   );
 }
-export default Counter;

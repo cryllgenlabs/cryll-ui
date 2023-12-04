@@ -4,6 +4,15 @@ import styles from "./Detail.module.scss";
 import Tags from "../Tags/Tags";
 import Badge from "../Badge/Badge";
 
+interface DetailProps {
+  title?: string;
+  badge?: string;
+  description?: string;
+  imageLink?: string;
+  secondaryTitle?: string;
+  tags?: string[];
+}
+
 export default function Detail({
   title = "Pulp Fiction",
   badge = "7.2",
@@ -11,7 +20,7 @@ export default function Detail({
   imageLink = "https=//picsum.photos/200/300",
   secondaryTitle = "1994",
   tags = [],
-}) {
+}: DetailProps) {
   return (
     <div className={styles.detail}>
       <div className="flex p-5">
@@ -37,11 +46,3 @@ export default function Detail({
     </div>
   );
 }
-
-Detail.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  imageLink: PropTypes.string,
-  secondaryTitle: PropTypes.string,
-  tags: PropTypes.arrayOf(PropTypes.string),
-};

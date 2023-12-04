@@ -1,6 +1,13 @@
 import React from "react";
 import styles from "./TextArea.module.scss";
 
+interface TextAreaProps {
+  inputValue?: string;
+  placeholderText?: string;
+  change?: (value: any) => void;
+  keyup?: (value: any) => void;
+}
+
 export default function TextArea({
   inputValue = "",
   placeholderText = "Type Something",
@@ -10,7 +17,7 @@ export default function TextArea({
   keyup = (value: any) => {
     console.log(value);
   },
-}) {
+}: TextAreaProps) {
   return (
     <div className="m-1">
       <textarea

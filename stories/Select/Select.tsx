@@ -1,8 +1,19 @@
 import React, { useState } from "react";
 import styles from "./Select.module.scss";
-import PropTypes from "prop-types";
 
-export default function Select({ label, options, value, triggerFunction }) {
+interface SelectProps {
+  label: string;
+  options: any[];
+  value: string;
+  triggerFunction: (value: string) => void;
+}
+
+export default function Select({
+  label,
+  options,
+  value,
+  triggerFunction,
+}: SelectProps) {
   let [selectedValue, setSelectedValue] = useState(value);
 
   function updateValue(event: any) {
@@ -27,20 +38,3 @@ export default function Select({ label, options, value, triggerFunction }) {
     </div>
   );
 }
-Select.defaultProps = {
-  label: "",
-  options: [
-    { label: "Option 1", value: "1" },
-    { label: "Option 2", value: "2" },
-    { label: "Option 3", value: "3" },
-  ],
-  value: "1",
-  triggerFunction: () => {},
-};
-
-Select.propTypes = {
-  label: PropTypes.string,
-  options: PropTypes.array,
-  value: PropTypes.string,
-  triggerFunction: PropTypes.func,
-};

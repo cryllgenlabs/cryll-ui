@@ -11,3 +11,5 @@ tailwind.config.js
 tsconfig.json
 .git
 .DS_Store
+.rollup.cache
+

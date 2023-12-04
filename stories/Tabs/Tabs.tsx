@@ -2,11 +2,16 @@ import { useState } from "react";
 import styles from "./Tabs.module.scss";
 import React from "react";
 import Tab from "./tab/tab";
-import PropTypes from "prop-types";
-export default function Tabs({ tabsList, triggerFunction }) {
+
+interface TabsProps {
+  tabsList: any[] | string[];
+  triggerFunction: (id: number) => void;
+}
+
+export default function Tabs({ tabsList, triggerFunction }: TabsProps) {
   let [activeTab, setActiveTab] = useState(0);
 
-  function selectTab(id) {
+  function selectTab(id: number) {
     setActiveTab(id);
     triggerFunction(id);
   }
@@ -32,8 +37,4 @@ Tabs.defaultProps = {
   triggerFunction: () => {
     alert("Tab clicked");
   },
-};
-
-Tabs.propTypes = {
-  tabsList: PropTypes.array,
 };
