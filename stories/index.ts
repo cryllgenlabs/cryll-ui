@@ -9,6 +9,6 @@ export { default as Searchbar } from "./Searchbar";
 export { default as Select } from "./Select";
 export { default as Tabs } from "./Tabs";
 export { default as Tags } from "./Tags";
-export { default as Textarea } from "./TextArea";
+export { default as TextArea } from "./TextArea";
 export { default as Tile } from "./Tile";
 export { default as TopBar } from "./TopBar";

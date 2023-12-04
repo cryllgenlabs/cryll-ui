@@ -1,7 +1,6 @@
-import React from "react";
 import styles from "./Modal.module.scss";
 
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 interface ModalProps {
   title?: string;
@@ -11,7 +10,7 @@ interface ModalProps {
 }
 
 export default function Modal({
-  title = "Modal",
+  title,
   isOpen,
   onClose,
   children,
