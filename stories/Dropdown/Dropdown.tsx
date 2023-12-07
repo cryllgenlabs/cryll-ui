@@ -10,11 +10,7 @@ interface DropdownProps {
 
 export default function Dropdown({
   menuItems = ["Option 1", "Option 2", "Option 3"],
-  click = (e: any) => {
-    e.preventDefault();
-    e.stopPropagation();
-    alert(e.target.innerText);
-  },
+  click,
 }: DropdownProps) {
   return (
     <div className={styles.dropdown}>

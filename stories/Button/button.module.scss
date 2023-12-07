@@ -15,17 +15,17 @@
   }
 }
 .storybook-button--primary {
-  color: $primary-font-color;
-  background-color: $primary-color;
+  color: $primary-font-color !important;
+  background-color: $primary-color !important;
 }
 .storybook-button--secondary {
-  color: $secondary-font-color;
-  background-color: $secondary-color;
+  color: $secondary-font-color !important;
+  background-color: $secondary-color !important;
 }
 
 .storybook-button--tertiary {
-  color: $tertiary-font-color;
-  background-color: $tertiary-color;
+  color: $tertiary-font-color !important;
+  background-color: $tertiary-color !important;
 }
 
 .storybook-button--small {

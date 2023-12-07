@@ -14,11 +14,7 @@ export default function Button({
   buttonType,
   size,
   label,
-  click = (e: any) => {
-    e.stopPropagation();
-    e.preventDefault();
-    alert("button clicked");
-  },
+  click,
 }: ButtonProps) {
   return (
     <button
