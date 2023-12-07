@@ -4,7 +4,7 @@ export { default as Counter } from "./Counter";
 export { default as Detail } from "./Detail";
 export { default as Dropdown } from "./Dropdown";
 export { default as Modal } from "./Modal";
-export { default as Searchbar } from "./Searchbar";
+export { default as Autocomplete } from "./Autocomplete";
 export { default as Select } from "./Select";
 export { default as Tabs } from "./Tabs";
 export { default as Tags } from "./Tags";

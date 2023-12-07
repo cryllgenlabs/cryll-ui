@@ -1,8 +1,8 @@
-import Searchbar from "./Searchbar";
+import Autocomplete from "./Autocomplete";
 
 export default {
-  component: Searchbar,
-  title: "Components/Searchbar",
+  component: Autocomplete,
+  title: "Components/Autocomplete",
   tags: ["autodocs"],
 };
 

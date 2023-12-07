@@ -1,19 +1,16 @@
-import styles from "./Searchbar.module.scss";
+import styles from "./Autocomplete.module.scss";
 import React from "react";
 import { useState } from "react";
 import Button from "../Button/Button";
-import Input from "../Input/Input";
 
-interface SearchbarProps {
+interface AutocompleteProps {
   initialSearchValue?: string;
   search?: (value: string) => void;
 }
-export default function Searchbar({
-  initialSearchValue = "",
-  search = (value) => {
-    alert(value);
-  },
-}: SearchbarProps) {
+export default function Autocomplete({
+  initialSearchValue,
+  search,
+}: AutocompleteProps) {
   const [searchValue, setSearchValue] = useState(initialSearchValue || "");
 
   function handleChange(event): void {
@@ -31,20 +28,20 @@ export default function Searchbar({
   }
 
   return (
-    <div className={styles.searchbar}>
-      <Input
-        inputType={"text"}
-        placeholderText={"What do you want to watch?"}
-        inputValue={searchValue}
-        change={handleChange}
-        keyup={handleKeyUp}
+    <div className={styles.Autocomplete}>
+      <input
+        type="text"
+        placeholder="What do you want to watch?"
+        value={searchValue}
+        onChange={handleChange}
+        onKeyUp={handleKeyUp}
         data-testid="searchValue-input"
-      ></Input>
+      ></input>
       <Button
         buttonStyle="primary"
         label={"Search"}
         size={"medium"}
-        click={() => search(searchValue)}
+        click={search}
         data-testid="search-button"
       ></Button>
     </div>
