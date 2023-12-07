@@ -10,15 +10,11 @@ interface InputProps {
 }
 
 export default function Input({
-  inputType = "text",
-  inputValue = "",
-  placeholderText = "Type Something",
-  change = (value) => {
-    alert(value);
-  },
-  keyup = (value) => {
-    alert(value);
-  },
+  inputType,
+  inputValue,
+  placeholderText,
+  change,
+  keyup,
 }: InputProps) {
   return (
     <div className="m-1">

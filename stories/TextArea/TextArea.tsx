@@ -1,22 +1,18 @@
-import React from "react";
+import React, { ChangeEventHandler, KeyboardEventHandler } from "react";
 import styles from "./TextArea.module.scss";
 
 interface TextAreaProps {
   inputValue?: string;
   placeholderText?: string;
-  change?: (value: any) => void;
-  keyup?: (value: any) => void;
+  change?: ChangeEventHandler<HTMLTextAreaElement>;
+  keyup?: KeyboardEventHandler<HTMLTextAreaElement>;
 }
 
 export default function TextArea({
   inputValue = "",
   placeholderText = "Type Something",
-  change = (value: any) => {
-    console.log(value);
-  },
-  keyup = (value: any) => {
-    console.log(value);
-  },
+  change,
+  keyup,
 }: TextAreaProps) {
   return (
     <div className="m-1">
