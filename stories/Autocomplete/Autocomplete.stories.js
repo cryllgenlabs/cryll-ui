@@ -8,7 +8,9 @@ export default {
 
 export const Default = {
   args: {
-    initialSearchValue: "Harry Potter",
-    search: (value) => alert(value),
+    placeholder: "Harry Potter",
+    search: (value) => {
+      alert(value);
+    },
   },
 };
